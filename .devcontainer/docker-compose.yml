@@ -1,0 +1,17 @@
+services:
+  dev:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    environment:
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      
+      - UV_PROJECT_ENVIRONMENT=/.venv
+    volumes:
+      - techfest_python_venv:/.venv
+      - ..:/workspaces:cached
+    command: sleep infinity
+volumes:
+  techfest_python_venv:
+    driver: local

@@ -1,0 +1,23 @@
+{
+    "name": "Webstep Tech Fest - Workshop: ReAct Agent",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "dev",
+    "workspaceFolder": "/workspaces/",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.debugpy",
+                "ms-python.isort",
+                "ms-python.black-formatter",
+                "mhutchie.git-graph",
+                "ms-toolsai.jupyter",
+                "christian-kohler.path-intellisense",
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/.venv/bin/python",
+                "isort.args": ["--profile", "black"]
+            }
+        }
+    }
+}
