@@ -1,2 +1,20 @@
 __pycache__/
 .env
+*.env
+
+/workshop
+
+# Terraform files and directories
+.terraform/
+.terraform.lock.hcl
+*.tfvars
+*.tfstate
+*.tfstate.*
+.terraformrc
+crash.log
+*.tfplan
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.DS_Store

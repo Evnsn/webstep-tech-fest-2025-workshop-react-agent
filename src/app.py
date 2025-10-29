@@ -167,7 +167,7 @@ def create_interface():
 def main():
     """Main function to launch the Gradio app."""
     demo = create_interface()
-    demo.launch(server_name="0.0.0.0", server_port=7860, share=False, debug=True)
+    demo.launch(server_name="0.0.0.0", server_port=7860, share=False)
 
 
 if __name__ == "__main__":

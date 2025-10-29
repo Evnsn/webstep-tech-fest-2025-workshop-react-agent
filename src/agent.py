@@ -2,10 +2,9 @@ from .tools import LOOPING_TOOLS, tools_description, tools_available
 import json
 import os
 from openai import OpenAI
-import time
-from typing import List, Literal, Optional
+from typing import List, Literal
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 
 MODELS = [
     "gpt-4.1-nano",
@@ -39,7 +38,12 @@ class Agent:
     def run(
         self,
         user_prompt: str,
-    ) -> str:
+    ):
+
+        if OPENAI_API_KEY == "":
+            yield """<span style="color:red; font-weight:bold;">ERROR:</span> Missing API Key..."""
+            return
+
         avaliable_tools = [
             tool for tool in tools_description if tool["name"] in self.tools
         ]
@@ -106,8 +110,6 @@ class Agent:
 
                 else:
                     return f"Function name: {function_name}, Function args: {function_args}"
-
-            time.sleep(0.1)
 
         # If task not solved within max iterations
         if not task_solved and self.max_iterations > 1:

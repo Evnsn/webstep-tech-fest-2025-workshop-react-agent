@@ -4,7 +4,7 @@ COPY --from=ghcr.io/astral-sh/uv:0.4.21 /uv /uvx /bin/
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PATH="/app/.venv/bin:$PATH" \
-    PORT=7860 \ 
+    PORT=7860 \
     UV_PROJECT_ENVIRONMENT="/app/.venv"
 
 WORKDIR /app

@@ -9,6 +9,10 @@ RUN apt-get update && apt-get install -y \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
+ENV UV_PROJECT_ENVIRONMENT=/.venv
+ENV VIRTUAL_ENV=/.venv
+ENV PATH="${VIRTUAL_ENV}/bin:${PATH}"
+
 COPY pyproject.toml pyproject.toml
 COPY uv.lock uv.lock
 
