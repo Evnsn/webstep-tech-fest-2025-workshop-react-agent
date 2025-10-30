@@ -167,7 +167,13 @@ def create_interface():
 def main():
     """Main function to launch the Gradio app."""
     demo = create_interface()
-    demo.launch(server_name="0.0.0.0", server_port=7860, share=False)
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=7860,
+        share=False,
+        auth=("webstep", "wtf2025"),  # set APP_PASSWORD in env
+        auth_message="Enter workshop password",
+    )
 
 
 if __name__ == "__main__":

@@ -3,9 +3,12 @@ COPY --from=ghcr.io/astral-sh/uv:0.4.21 /uv /uvx /bin/
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
-    PATH="/app/.venv/bin:$PATH" \
-    PORT=7860 \
-    UV_PROJECT_ENVIRONMENT="/app/.venv"
+    PORT=7860
+
+RUN useradd -u 1000 -m appuser
+
+ENV UV_PROJECT_ENVIRONMENT="/home/appuser/.venv" \
+    PATH="/home/appuser/.venv/bin:$PATH" 
 
 WORKDIR /app
 
@@ -13,11 +16,13 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends tzdata ca-certificates \
  && rm -rf /var/lib/apt/lists/*
 
+USER 1000
+
 COPY pyproject.toml uv.lock ./
 
 RUN uv sync --frozen --no-dev
 
-COPY . .
+COPY --chown=1000:1000 . .
 
 EXPOSE 7860
 
