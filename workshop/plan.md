@@ -1,0 +1,21 @@
+# Tidsplan
+- 14:00 - Intro/Setup (5min)
+  - GiT, Azure, Docker, etc
+- 14:05 - PP: Part 1 (5min)
+  - ReAct, LLMs, Chat-templates, LLMs (bi)product
+- 14:10 - Demo 1 + Lab 1 (15min)
+  - Prob 1: Structured output (5min)
+  - Prob 2: Looping counting (5min)
+  - Prob 3: Loping counting with *tool call* (5min)
+- 14:25 - "Pause" / Recap
+- 14:30 - PP: Part 2 (5min)
+  - Modenhets nivå, Examples: RAG + Self-RAG,  Resonerings rammeværk, ReAct loop: Reasoning + Acting (5min)
+- 14:35 - Demo 2 + Lab 2 (15)
+  - Demo 2 (5 min)
+    - Agent inf loop, (1min)
+    - Agent un-controlled behavior (2min)
+    - ReAct Framework i action (3min)
+  - Prob 1: Calculator ReAct agent
+  - Prob 2: Webstep office ReAct Agent
+  - Bonus: Røverspråk without tool call
+  - Bonus 1.1: Røverspråk with tool call (OBS:bug)

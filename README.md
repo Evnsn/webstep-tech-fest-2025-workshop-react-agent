@@ -5,11 +5,12 @@ This repository is associated with a workshop held at WTF25.
 There are three ways to set up the workshop.
 
 ### 1. Run the workshop via the web
+The workshop app is hosted via Azure.   
+
 **Requirements:**
 - None
 
 **Steps:**  
-The workshop app is hosted via Azure.  
 1. Go to: [https://ca-wtf-25-app.proudbeach-3290d5a8.norwayeast.azurecontainerapps.io/](https://ca-wtf-25-app.proudbeach-3290d5a8.norwayeast.azurecontainerapps.io/)
 
 ### 2. Run locally via `docker-compose`

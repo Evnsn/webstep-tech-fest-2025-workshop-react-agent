@@ -1,8 +1,8 @@
 __pycache__/
-.env
-*.env
+# .env
+dockerhub.env
 
-/workshop
+# /workshop
 
 # Terraform files and directories
 .terraform/
