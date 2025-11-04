@@ -2,7 +2,7 @@
 ## No ReAct loop:
 **Input prompt**
 ```
-What is (2(3+4*5)+3)/7?
+What is (2(3+4x5)+3)/7?
 ```
 
 ## No system prompt

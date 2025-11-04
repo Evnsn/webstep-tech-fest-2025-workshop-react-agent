@@ -51,14 +51,14 @@ def create_interface():
     """Create the Gradio interface."""
 
     with gr.Blocks(title="TechFest Chat", theme=gr.themes.Base()) as demo:
-        gr.Markdown("# 💬 TechFest Chat")
+        gr.Markdown("# Webstep Tech Fest - WtfGPT 🤖")
 
         with gr.Row():
             # Tab: Settings
             with gr.Tab("Settings"):
 
                 # Model selection
-                gr.Markdown("### Model")
+                gr.Markdown("### Models")
                 gr_model_dropdown = gr.Dropdown(
                     choices=MODELS,
                     value=MODELS[0],
@@ -110,7 +110,7 @@ def create_interface():
             with gr.Column(scale=2):
                 gr_chatbot = gr.Chatbot(
                     label="Chat",
-                    height=500,
+                    height=1000,
                     show_label=False,
                     container=True,
                     render_markdown=True,
@@ -166,14 +166,8 @@ def create_interface():
 
 def main():
     """Main function to launch the Gradio app."""
-    demo = create_interface()
-    demo.launch(
-        server_name="0.0.0.0",
-        server_port=7860,
-        share=False,
-        auth=("webstep", "wtf2025"),  # set APP_PASSWORD in env
-        auth_message="Enter workshop password",
-    )
+    app = create_interface()
+    app.launch(server_name="0.0.0.0", server_port=7860, share=False)
 
 
 if __name__ == "__main__":
