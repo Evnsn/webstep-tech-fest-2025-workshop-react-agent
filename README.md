@@ -2,32 +2,6 @@
 This repository is associated with a workshop held at WTF25.
 
 ## Workshop Setup
-There are three ways to set up the workshop.
-
-### 1. Run the workshop via the web
-The workshop app is hosted via Azure.   
-
-**Requirements:**
-- None
-
-**Steps:**  
-1. Go to: [https://ca-wtf-25-app.proudbeach-3290d5a8.norwayeast.azurecontainerapps.io/](https://ca-wtf-25-app.proudbeach-3290d5a8.norwayeast.azurecontainerapps.io/)
-
-### 2. Run locally via `docker-compose`
-**Requirements:**
-- Git
-- Docker
-
-**Steps:**
-1. Clone the repository:  
-   `git clone https://github.com/Evnsn/webstep-tech-fest-2025-workshop-react-agent.git`
-2. Navigate to the cloned repository and run in terminal:  
-   `docker-compose up -d`
-3. Open `http://localhost:7860` in your browser.
-4. Stop *docker-compose*:
-   `docker-compose down`
-
-### 3. Run in a Dev Container
 **Requirements:**  
 - Git
 - Docker
@@ -41,6 +15,9 @@ The workshop app is hosted via Azure.
 3. Open the *Command Palette* (`Ctrl+Shift+P` on Windows) and run:  
    `Rebuild and Reopen in Container`
 4. Open `http://localhost:7860` in your browser.
+
+**OBS:**
+1. Remember to add API key in [./.devcontainer/.env](./.devcontainer/.env)
 
 ## Tech stack
 A Python-based application utilizing UV for package management and Gradio to provide an intuitive user interface that integrates with the OpenAI API for intelligent agent interactions.

@@ -2,6 +2,7 @@
     "name": "Webstep Tech Fest - Workshop: ReAct Agent",
     "dockerComposeFile": "docker-compose.yml",
     "service": "dev",
+    "forwardPorts": [7860],
     "workspaceFolder": "/workspaces/",
     "customizations": {
         "vscode": {
